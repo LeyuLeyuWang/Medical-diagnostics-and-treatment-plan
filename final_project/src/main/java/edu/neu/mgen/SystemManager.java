@@ -10,6 +10,9 @@ public class SystemManager {
     private List<Illness> illnesses = new ArrayList<>();
 
     private Map<Symptom, Map<Illness, Double>> symptomIllnessWeights = new HashMap<>();
+    
+    public SystemManager() {
+    }
 
     public void addSymptom(Symptom symptom) {
         symptoms.add(symptom);
@@ -25,5 +28,12 @@ public class SystemManager {
             symptomIllnessWeights.get(symptom).put(illness, weight);
         }
     }
+
+    public Double getWeightForSymptomAndIllness(Symptom symptom, Illness illness) {
+        return symptomIllnessWeights.get(symptom).get(illness);
+    }
+
+
+
 
 }
