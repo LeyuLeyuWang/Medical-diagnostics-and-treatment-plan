@@ -15,7 +15,3 @@ The Medical Diagnosis and Treatment System is a tool designed to assist healthca
 
 We welcome contributions to the Medical Diagnosis and Treatment System. Please read through our contribution guidelines for more information on how to submit feedback, feature requests, and code changes.
 
-## License
-
-This Medical Diagnosis and Treatment System is available for use under the XYZ License. The use of this system is permitted for educational and research purposes only. **Commercial use is strictly prohibited**. Please see the LICENSE file for full license details.
-
