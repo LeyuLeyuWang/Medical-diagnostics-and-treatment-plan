@@ -3,31 +3,31 @@ package edu.neu.mgen;
 public class Illness {
 
     private String name;
-    private TreatmentPlan treatmentPlan;
+    private String String;
 
     public Illness(){
 
     }
 
-    public Illness(String name, TreatmentPlan treatmentPlan) {
+    public Illness(String name, String String) {
         this.name = name;
-        this.treatmentPlan = treatmentPlan;
+        this.String = String;
     }
 
     public String getName() {
         return name;
     }
 
-    public TreatmentPlan getTreatmentPlan() {
-        return treatmentPlan;
+    public String getString() {
+        return String;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setTreatmentPlan(TreatmentPlan treatmentPlan) {
-        this.treatmentPlan = treatmentPlan;
+    public void setString(String String) {
+        this.String = String;
     }
 
     

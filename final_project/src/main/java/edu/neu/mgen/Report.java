@@ -1,5 +1,5 @@
 package edu.neu.mgen;
 
-public class Diagnosis {
+public class Report {
 
 }
