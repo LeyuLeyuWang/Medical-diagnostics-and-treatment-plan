@@ -23,6 +23,14 @@ public class SystemManager {
         illnesses.add(illness);
     }
 
+    public List<Symptom> getSymptoms() {
+        return symptoms;
+    }
+
+    public List<Illness> getIllnesses() {
+        return illnesses;
+    }
+
     public void addWeight(Symptom symptom, Illness illness, Double weight) {
         if (symptomIllnessWeights.containsKey(symptom)) {
             symptomIllnessWeights.get(symptom).put(illness, weight);
@@ -30,8 +38,22 @@ public class SystemManager {
     }
 
     public Double getWeightForSymptomAndIllness(Symptom symptom, Illness illness) {
-        return symptomIllnessWeights.get(symptom).get(illness);
+        Map<Illness, Double> weights = symptomIllnessWeights.get(symptom);
+        if (weights != null) {
+            return weights.getOrDefault(illness, 0.0);
+        }
+        return 0.0; 
     }
+    
+    public Symptom getSymptomByName(String name) {
+        for (Symptom symptom : symptoms) {
+            if (symptom.getName().equalsIgnoreCase(name)) {
+                return symptom;
+            }
+        }
+        return null;
+    }
+    
 
     public Map<Illness, Double> diagnosis(List<Symptom> inputSymptoms) {
         Map<Illness, Double> illnessScores = new HashMap<>();
